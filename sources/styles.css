@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* Home */
 :root {
     --main-text-color: #d3ab76;
     --main-font-family: 'Poppins', sans-serif;
@@ -292,10 +293,6 @@ body {
 }
 
 @media only screen and (min-width: 320px) {
-    body {
-      background-color: lightblue;
-    }
-  }
   }
 
 #selected {

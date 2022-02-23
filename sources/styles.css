@@ -44,7 +44,7 @@ body {
 /*      Nav-Bar     */
 
 .cafe__header {
-    z-index: 10;
+    z-index: 1;
     display: flex;
     position: absolute;
     justify-content: center;
@@ -154,6 +154,10 @@ body {
     align-items: center;
     max-width: 50%;
     border: 1px solid var(--main-text-color);
+}
+
+#grid2 {
+    flex-direction: row-reverse;
 }
 
 .cafe__grid__image {
@@ -292,7 +296,30 @@ body {
     transform: scale(1.05);
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (max-width: 800px) {
+    .cafe__grid__item__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+    }
+
+    #grid2 {
+        flex-direction: column;
+    }
+
+    .cafe__grid__item {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .cafe__contact {
+        flex-direction: column;
+    }
+
+    .cafe__contact__component {
+        margin-bottom: 40px;
+    }
   }
 
 #selected {

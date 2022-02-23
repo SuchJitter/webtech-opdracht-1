@@ -37,7 +37,7 @@ body {
 }
 
 
-li {
+.cafe__nav li {
     text-decoration: none;
     display: inline-block;
 }
@@ -94,6 +94,20 @@ li {
     font-size: 2em;
 }
 
+/*Contact page*/
+
+#contact ul {
+    padding: 1em;
+    list-style: none;
+}
+
+#contact h2,h3 {
+    color: #d3ab76;
+}
+
+#contact img {
+    width: 10%;
+}
 /*Table*/
 
 table, th, td {
@@ -114,6 +128,5 @@ th {
 }
 
 td { 
-    padding-top: 5px;
-    padding-bottom:5px;
+    padding: 5px;
 }

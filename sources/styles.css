@@ -329,6 +329,10 @@ body {
 #contact img {
     width: 10%;
 }
+
+#lowergrid {
+    padding-top: 0px;
+}
 /*Table*/
 
 table, th, td {

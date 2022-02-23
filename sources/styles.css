@@ -117,7 +117,7 @@ body {
     overflow: hidden;
 }
 
-.cafe__slider__items {
+.cafe__slideshow img {
     object-fit: cover;
     min-width: 100vw;
     height: 100vh;
@@ -320,6 +320,20 @@ body {
     .cafe__contact__component {
         margin-bottom: 40px;
     }
+
+    .cafe__header {
+        position: unset;
+        flex-direction: column;
+    }
+    .cafe__nav li {
+        display: block;
+        font-size: 20px;
+    }
+    .cafe__logo {
+        top: 35vh;
+    }
+
+    .
   }
 
 #selected {

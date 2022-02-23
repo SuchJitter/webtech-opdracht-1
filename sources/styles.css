@@ -364,6 +364,17 @@ body {
 #lowergrid {
     margin-top: 0px;
 }
+
+#contacts img {
+    width: 50px;
+    height: auto;
+    
+}
+
+#contacts li{
+    list-style: none;
+}
+
 /*Table*/
 
 table, th, td {

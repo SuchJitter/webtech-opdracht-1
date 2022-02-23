@@ -328,6 +328,10 @@ body {
 
 /* Content */
 
+.unset {
+    position: unset;
+}
+
 .content { 
     min-height: 90vh;
     color : white;

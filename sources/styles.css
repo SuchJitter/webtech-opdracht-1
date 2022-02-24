@@ -180,6 +180,7 @@ body {
     text-align: center;
     text-align: center;
     margin-top: 3%;
+    font-weight: normal;
     width: 80%;
 }
 
@@ -296,9 +297,22 @@ body {
 }
 
 .cafe__takeaway__button a {
+    transition: all 0.3s ease-in-out;
     text-decoration: none;
     color: var(--main-text-color);
     padding: 1em;
+}
+
+.cafe__takeaway__button a:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.cafe__grid p a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 @media only screen and (max-width: 800px) {
@@ -356,12 +370,15 @@ body {
 }
 
 .content { 
-    min-height: 90vh;
     color : white;
     text-align: center;
     font-family: var(--main-font-family);
     font-size: var(--nav-font-size);
     font-weight: var(--nav-font-weight);
+}
+
+.no-margin {
+    margin: 0;
 }
 
 .content h2 {

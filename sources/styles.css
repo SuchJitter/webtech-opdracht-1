@@ -213,7 +213,7 @@ body {
     border: 5px solid var(--main-text-color);
 }
 
-.cafe__contact__title {
+.cafe__contact__wrapper h1 {
     margin-top: 10px;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -222,7 +222,7 @@ body {
     font-weight: bold;
 }
 
-.cafe__contact__paragraph {
+.cafe__contact__wrapper p {
     margin-top: 10px;
     font-size: 0.8em;
     letter-spacing: 4px;
@@ -239,7 +239,7 @@ body {
     color: var(--main-text-color);
 }
 
-.cafe__takeaway__title {
+.cafe__takeaway h1 {
     font-weight: bold;
     font-size: 3em;
 }
@@ -250,11 +250,11 @@ body {
     margin-top: 20px;
 }
 
-.cafe__takeaway__image {
+.cafe__takeaway img {
     width: 50%;
 }
 
-.cafe__takeaway__paragraph {
+.cafe__takeaway p {
     width: 75%;
     text-align: center;
     margin-top: 20px;
@@ -268,7 +268,7 @@ body {
     height: 8vh;
 }
 
-.cafe__footer__text {
+.cafe__footer p {
     margin-left: 20px;
     margin-bottom: 20px;
 }
@@ -277,7 +277,6 @@ body {
     margin-top: 30px;
     transition: all 0.3s ease-in-out;
     font-family: var(--main-font-family);
-    color: var(--main-text-color);
     background: none;
     border: 2px solid var(--main-text-color);
     background: black;
@@ -296,12 +295,22 @@ body {
     transform: scale(1.05);
 }
 
+.cafe__takeaway__button a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    padding: 1em;
+}
+
 @media only screen and (max-width: 800px) {
     .cafe__grid__item__wrapper {
         display: flex;
         flex-direction: column;
         justify-content: unset;
         align-items: center;
+    }
+
+    .cafe__grid__text {
+        padding: 0;
     }
 
     #grid2 {
@@ -311,6 +320,8 @@ body {
     .cafe__grid__item {
         max-width: 100%;
         width: 100%;
+        border: none;
+        margin-top: 20px;
     }
 
     .cafe__contact {

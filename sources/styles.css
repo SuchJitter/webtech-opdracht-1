@@ -55,7 +55,7 @@ body {
     color: white;
 }
 
-.cafe__nav {
+.cafe__header nav {
     display: flex;
     margin: auto;
     flex-wrap: wrap;
@@ -63,7 +63,7 @@ body {
 }
 
 
-.cafe__nav li {
+.cafe__header nav li {
     text-decoration: none;
     display: inline-block;
 }
@@ -160,7 +160,7 @@ body {
     flex-direction: row-reverse;
 }
 
-.cafe__grid__image {
+.cafe__grid img {
     width: 100%;
     height: 100%;
 }
@@ -170,13 +170,13 @@ body {
     font-family: var(--main-font-family);
 }
 
-.cafe__grid__title {
+.cafe__grid h1 {
     font-size: 2em;
     text-align: center;
     font-weight: bold;
 }
 
-.cafe__grid__paragraph {
+.cafe__grid p {
     text-align: center;
     text-align: center;
     margin-top: 3%;
@@ -325,16 +325,14 @@ body {
         position: unset;
         flex-direction: column;
     }
-    .cafe__nav li {
+    .cafe__header nav li {
         display: block;
         font-size: 20px;
     }
     .cafe__logo {
         top: 35vh;
     }
-
-    .
-  }
+}
 
 #selected {
     color: red;

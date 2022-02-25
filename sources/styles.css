@@ -68,7 +68,8 @@ body {
     display: inline-block;
 }
 
-.cafe__nav__items {
+
+.cafe__nav ul li a{
     display: inline-block;
     margin-inline: 26px;
     position: relative;
@@ -83,7 +84,7 @@ body {
     white-space: nowrap;
 }
 
-.cafe__nav__items:after {    
+.cafe__nav ul li a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -96,7 +97,7 @@ body {
     width: 0;
 }
 
-.cafe__nav__items:hover:after { 
+.cafe__nav ul li a:hover:after { 
     width: 100%; 
     left: 0; 
 }
@@ -312,7 +313,17 @@ body {
     text-decoration: none;
     color: var(--main-text-color);
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1em;}
+    
+.cafe__normal__link {
+    color: var(--main-text-color);
+    font-family: var(--main-font-family);
+}
+
+.cafe__link__image {
+    margin-top: 40px;
+    width: 160px;
+    border-radius: 8px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -384,6 +395,7 @@ body {
 .content h2 {
     margin-top: 4vh ;
     font-size: 2em;
+    color : #d3ab76;
 }
 
 /*Contact page*/
@@ -397,16 +409,13 @@ body {
     color: #d3ab76;
 }
 
-#contact img {
-    width: 10%;
-}
 
 #lowergrid {
     margin-top: 0px;
 }
 
 #contacts img {
-    width: 50px;
+    max-width: 60%;
     height: auto;
     
 }
@@ -420,6 +429,7 @@ body {
 table, th, td {
     border :1px solid white;
     border-collapse: collapse;
+    color: #d3ab76;
 }
 
 table {

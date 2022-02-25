@@ -313,7 +313,8 @@ body {
     text-decoration: none;
     color: var(--main-text-color);
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.1em;}
+    
 .cafe__normal__link {
     color: var(--main-text-color);
     font-family: var(--main-font-family);

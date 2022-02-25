@@ -68,7 +68,8 @@ body {
     display: inline-block;
 }
 
-.cafe__nav__items {
+
+.cafe__nav ul li a{
     display: inline-block;
     margin-inline: 26px;
     position: relative;
@@ -83,7 +84,7 @@ body {
     white-space: nowrap;
 }
 
-.cafe__nav__items:after {    
+.cafe__nav ul li a:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
     content: "";
@@ -96,7 +97,7 @@ body {
     width: 0;
 }
 
-.cafe__nav__items:hover:after { 
+.cafe__nav ul li a:hover:after { 
     width: 100%; 
     left: 0; 
 }

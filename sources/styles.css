@@ -314,7 +314,7 @@ body {
     color: var(--main-text-color);
     font-weight: bold;
     font-size: 1.1em;}
-    
+
 .cafe__normal__link {
     color: var(--main-text-color);
     font-family: var(--main-font-family);
@@ -405,7 +405,7 @@ body {
     list-style: none;
 }
 
-#contact h2,h3 {
+#contact h2,h3,p {
     color: #d3ab76;
 }
 

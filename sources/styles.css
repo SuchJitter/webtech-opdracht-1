@@ -296,7 +296,6 @@ body {
     transform: scale(1.05);
 }
 
-<<<<<<< Updated upstream
 .cafe__takeaway__button a {
     transition: all 0.3s ease-in-out;
     text-decoration: none;
@@ -314,7 +313,6 @@ body {
     color: var(--main-text-color);
     font-weight: bold;
     font-size: 1.1em;
-=======
 .cafe__normal__link {
     color: var(--main-text-color);
     font-family: var(--main-font-family);
@@ -324,7 +322,6 @@ body {
     margin-top: 40px;
     width: 160px;
     border-radius: 8px;
->>>>>>> Stashed changes
 }
 
 @media only screen and (max-width: 800px) {

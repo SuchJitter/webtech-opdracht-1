@@ -304,7 +304,7 @@ body {
     padding: 1em;
 }
 
-.cafe__takeaway__button a:hover {
+.cafe__takeaway__button a:hover { 
     color: black;
     cursor: pointer;
 }

@@ -13,6 +13,7 @@ function createTableHeader(description) {
 
 class menu {
     constructor(){
+
     }
     createNewMenuSection(propertyArray) {
         return new menuSection(propertyArray);

@@ -22,7 +22,7 @@ class menu {
 
 class menuSection {
     constructor(titel, propertyArray){
-        var subTotaal = 0;
+        this.subTotaal = 0;
         let title = document.createElement("h1");
         let titleText = document.createTextNode(titel);
         title.appendChild(titleText);
@@ -47,10 +47,10 @@ class menuSection {
 
     addPrice (e) {
         if(e.target.tagName == "BUTTON") {
-            var parent = e.target.parentNode.parentNode;
+            var parent = e.target.parentNode.parentNode.parentNode;
             var prijs = parent.childNodes[parent.childNodes.length - 2];
-            var aantal = e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 1];
-            this.subTotaal = prijs * aantal;
+            var aantal = e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 2];
+            this.subTotaal += parseFloat(prijs.innerText) * parseFloat(aantal.innerText + 1);
             console.log(this.subTotaal);
         }
     }

@@ -147,43 +147,36 @@ class food {
 }
 
 class voorgerecht extends food {
-    constructor(naam, prijs, vega){
-        super(naam);
-        super(prijs);
-        super(vega);
+    constructor(propertyArray){
+        super(propertyArray);
+        this.spicy = propertyArray[2];
     }
 }
 
-class hoofdgerecht extends food {
-    constructor(naam, prijs, vega){
-        super(naam);
-        super(prijs);
-        super(vega);
+class hoofgerecht extends food {
+    constructor(propertyArray){
+        super(propertyArray);
+        this.spicy = propertyArray[2];
     }
 }
 
 class nagerecht extends food {
-    constructor(naam, prijs, vega){
-        super(naam);
-        super(prijs);
-        super(vega);
+    constructor(propertyArray){
+        super(propertyArray);
     }
 }
 
 class drinken extends food {
-    constructor(naam, percentage,prijs){
-        super(naam);
-        super(prijs);
-        this.percentage = percentage;
+    constructor(propertyArray){
+        super(propertyArray);
+        this.percentage = propertyArray[1];
     }
 }
 
 class borrelHap extends food {
-    constructor(naam, prijs, vega, hoeveelheid){
-        super(naam);
-        super(prijs);
-        super(vega);
-        this.hoeveelheid = hoeveelheid;
+    constructor(propertyArray){
+        super(propertyArray);
+        this.hoeveelheid = propertyArray[2];
     }
 }
 

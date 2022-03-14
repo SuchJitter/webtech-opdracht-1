@@ -93,5 +93,9 @@ class borrelHap extends food {
 }
 
 let menus = new menu();
-let menusectie = menus.createNewMenuSection(["Gerecht", "Vega", "Spicy", "Prijs"]);
-menusectie.createNewFood(["ei", "nee", "1/5", "12,95"])
+let voorgerechten = menus.createNewMenuSection(["Gerecht", "Vega", "Spicy", "Prijs"]);
+voorgerechten.createNewFood(["ei", "nee", "1/5", 12.95]);
+voorgerechten.createNewFood(["tomatensoep","ja","1/5",9.99]);
+voorgerechten.createNewFood(["garnalenspies","nee","3/5",13.95]);
+voorgerechten.createNewFood(["fetaSalade","ja","2/5",8.99]);
+voorgerechten.createNewFood(["Stokbrood","ja","0/5",6.95]);

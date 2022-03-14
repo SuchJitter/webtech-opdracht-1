@@ -21,43 +21,48 @@ class menu {
 
 class menuSection {
     constructor(){
-        var tabel = document.createElement("table");
+        this.tabel = document.createElement("table");
         let tr = document.createElement("tr");
         let gerecht = createTableHeader("gerecht");
         let vegetarisch = createTableHeader("Vega");
         let spicy = createTableHeader("Spicy");
         let prijs = createTableHeader("Prijs");
-        tabel.appendChild(tr);
+        this.tabel.appendChild(tr);
         tr.appendChild(gerecht);
         tr.appendChild(vegetarisch);
         tr.appendChild(spicy);
         tr.appendChild(prijs);
-        menuElement.appendChild(tabel);
+        menuElement.appendChild(this.tabel);
     }
-    createNewFood(voedsel) {
-        let gerecht = new food(voedsel);
-        tabel.appendChild(gerecht);
+    createNewFood(naam, vega, spicy, prijs) {
+        let gerecht = new food(naam, vega, spicy, prijs);
+        this.tabel.appendChild(gerecht);
     }
 }
 
 class food {
-    constructor(naam, prijs, vega){
+    constructor(naam, vega, spicy, prijs){
         this.naam = naam;
-        this.prijs = prijs;
         this.vega = vega;
+        this.spicy = spicy;
+        this.prijs = prijs;
         var master = document.createElement("tr");
-        var naam = document.createElement("td");
-        var prijs = document.createElement("td");
-        var vega = document.createElement("td");
+        var naamTd = document.createElement("td");
+        var vegaTd = document.createElement("td");
+        var spicyTd = document.createElement("td");
+        var prijsTd = document.createElement("td");
         var naamText = document.createTextNode(naam);
-        var prijsText = document.createTextNode(prijs);
         var vegaText = document.createTextNode(vega);
-        naam.appendChild(naamText);
-        prijs.appendChild(prijsText);
-        vega.appendChild(vegaText);
-        master.appendChild(naam);
-        master.appendChild(vega);
-        master.appendChild(prijs);
+        var spicyText = document.createTextNode(spicy);
+        var prijsText = document.createTextNode(prijs);
+        naamTd.appendChild(naamText);
+        vegaTd.appendChild(vegaText);
+        spicyTd.appendChild(spicyText);
+        prijsTd.appendChild(prijsText);
+        master.appendChild(naamTd);
+        master.appendChild(vegaTd);
+        master.appendChild(spicyTd);
+        master.appendChild(prijsTd);
         return master;
     }
 }
@@ -106,4 +111,4 @@ class borrelHap extends food {
 
 let menus = new menu();
 let menusectie = menus.createNewMenuSection();
-menusectie.createNewFood("ei", "yes", 123)
+menusectie.createNewFood("ei", "nee", "1/5", "12,95")

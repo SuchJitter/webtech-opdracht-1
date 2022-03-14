@@ -15,13 +15,19 @@ class menu {
     constructor(){
         this.totaal = 0;
         this.menuSections= [];
-        var menubox = document.getElementById("menubox");
-        menubox.addEventListener("click", (e) => this.calcPrice(e), false);
+        menuElement.addEventListener("click", (e) => this.calcPrice(e), false);
     }
     createNewMenuSection(title, propertyArray) {
         let ms = new menuSection(title, propertyArray);
         this.menuSections.push(ms)
         return ms;
+    }
+
+    createTotaal() {
+        let totaalH = document.createElement("h1");
+        let totaalTekst = document.createTextNode("Totaal: " + this.totaal);
+        totaalH.appendChild(totaalTekst);
+        menuElement.appendChild(totaalH);
     }
 
     calcPrice (e) {
@@ -30,7 +36,8 @@ class menu {
             for (let i = 0; i < this.menuSections.length; i++) {
                 this.totaal += this.menuSections[i].subTotaal;
             }
-            console.log(this.totaal);
+            this.totaal = Math.round(this.totaal * 100) / 100;
+            menuElement.childNodes[menubox.childNodes.length - 1].childNodes[0].nodeValue = "Totaal: " + this.totaal.toString();
         }
     }
 }
@@ -194,3 +201,5 @@ borrelhapjes.createNewFood(["Kaas Snacks","Ja",8,4.99]);
 borrelhapjes.createNewFood(["Bami Hapjes","Ja",8,5.99]);
 borrelhapjes.createNewFood(["Rostis","Ja",6,3.99]);
 borrelhapjes.createNewFood(["Kip Nuggets","Nee",12,6.99]);
+
+menus.createTotaal();

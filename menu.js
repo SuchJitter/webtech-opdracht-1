@@ -22,6 +22,7 @@ class menu {
 
 class menuSection {
     constructor(titel, propertyArray){
+        var subTotaal = 0;
         let title = document.createElement("h1");
         let titleText = document.createTextNode(titel);
         title.appendChild(titleText);
@@ -36,10 +37,22 @@ class menuSection {
         tr.appendChild(aantal);
         this.tabel.appendChild(tr);
         menuElement.appendChild(this.tabel);
+
+        this.tabel.addEventListener("click", (e) => this.addPrice(e), true);
     }
     createNewFood(propertyArray) {
         let gerecht = new food(propertyArray);
         this.tabel.appendChild(gerecht);
+    }
+
+    addPrice (e) {
+        if(e.target.tagName == "BUTTON") {
+            var parent = e.target.parentNode.parentNode;
+            var prijs = parent.childNodes[parent.childNodes.length - 2];
+            var aantal = e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 1];
+            this.subTotaal = prijs * aantal;
+            console.log(this.subTotaal);
+        }
     }
 }
 
@@ -53,11 +66,12 @@ class food {
             master.appendChild(property);
         }
         let tableElement = document.createElement("td");
+        var count = 0;
         let aantal = document.createElement("div");
         let plus = document.createElement("button");
         let plusTekst = document.createTextNode("+");
         let totaal = document.createElement("p");
-        let totaalTekst = document.createTextNode("0");
+        let totaalTekst = document.createTextNode(count);
         let min = document.createElement("button");
         let minTekst = document.createTextNode("-");
         plus.appendChild(plusTekst);
@@ -68,6 +82,10 @@ class food {
         aantal.appendChild(plus);
         tableElement.appendChild(aantal);
         master.appendChild(tableElement);
+
+        plus.addEventListener("click", function () {count = count + 1; totaalTekst.nodeValue = count;}, true);
+        min.addEventListener("click", function () {if (count > 0) {count = count - 1} else {count = 0}; totaalTekst.nodeValue = count;}, true);
+
         return master;
     }
 }

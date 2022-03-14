@@ -13,6 +13,7 @@ function createTableHeader(description) {
 
 class menu {
     constructor(){
+
     }
     createNewMenuSection() {
         return new menuSection();
@@ -110,5 +111,7 @@ class borrelHap extends food {
 }
 
 let menus = new menu();
-let menusectie = menus.createNewMenuSection();
-menusectie.createNewFood("ei", "nee", "1/5", "12,95")
+let voorgerechten = menus.createNewMenuSection();
+voorgerechten.createNewFood("ei", "nee", "1/5", "12,95");
+voorgerechten.createNewFood("tomatensoep","ja","1/5","9,99");
+voorgerechten.createNewFood("garnalenspies","nee","3/5","13,95")

@@ -482,3 +482,7 @@ footer {
 #menubox table tr div button:hover {
     cursor: pointer;
  }
+
+ul {
+    list-style: none;
+}

@@ -63,6 +63,28 @@ class menuSection {
         this.tabel.addEventListener("click", (e) => this.addPrice(e), true);
     }
     createNewFood(propertyArray) {
+        switch (this.titel) {
+            case "Voorgerechten" :
+                let vg = new voorgerecht(propertyArray);
+                this.tabel.appendChild(vg);
+                break;
+            case "Hoofdgerechten" :
+                let hg = new hoofdgerecht(propertyArray);
+                this.tabel.appendChild(hg);
+                break;
+            case "Nagerechten" :
+                let ng = new nagerecht(propertyArray);
+                this.tabel.appendChild(ng);
+                break;
+            case "Dranken" :
+                let dr = new drinken(propertyArray);
+                this.tabel.appendChild(dr);
+                break;
+            case "Borrelhapjes" :
+                let bh = new borrelHap(propertyArray);
+                this.tabel.appendChild(bh);
+                break;
+        }
         let gerecht = new food(propertyArray);
         this.tabel.appendChild(gerecht);
     }
@@ -132,7 +154,7 @@ class voorgerecht extends food {
     }
 }
 
-class hoofgerecht extends food {
+class hoofdgerecht extends food {
     constructor(naam, prijs, vega){
         super(naam);
         super(prijs);

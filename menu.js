@@ -13,10 +13,25 @@ function createTableHeader(description) {
 
 class menu {
     constructor(){
-
+        this.totaal = 0;
+        this.menuSections= [];
+        var menubox = document.getElementById("menubox");
+        menubox.addEventListener("click", (e) => this.calcPrice(e), false);
     }
     createNewMenuSection(title, propertyArray) {
-        return new menuSection(title, propertyArray);
+        let ms = new menuSection(title, propertyArray);
+        this.menuSections.push(ms)
+        return ms;
+    }
+
+    calcPrice (e) {
+        if (e.target.tagName == "BUTTON") {
+            this.totaal = 0;
+            for (let i = 0; i < this.menuSections.length; i++) {
+                this.totaal += this.menuSections[i].subTotaal;
+            }
+            console.log(this.totaal);
+        }
     }
 }
 
@@ -46,12 +61,17 @@ class menuSection {
     }
 
     addPrice (e) {
-        if(e.target.tagName == "BUTTON") {
+        if(e.target.tagName == "BUTTON" && e.target.innerText == "+") {
             var parent = e.target.parentNode.parentNode.parentNode;
             var prijs = parent.childNodes[parent.childNodes.length - 2];
-            var aantal = e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 2];
-            this.subTotaal += parseFloat(prijs.innerText) * parseFloat(aantal.innerText + 1);
-            console.log(this.subTotaal);
+            this.subTotaal += parseFloat(prijs.innerText)
+        }
+        else if(e.target.tagName == "BUTTON" && e.target.innerText == "-") {
+            if (e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 2].innerText > 0){
+                var parent = e.target.parentNode.parentNode.parentNode;
+                var prijs = parent.childNodes[parent.childNodes.length - 2];
+                this.subTotaal -= parseFloat(prijs.innerText)
+            }
         }
     }
 }

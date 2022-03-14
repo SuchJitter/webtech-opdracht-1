@@ -30,35 +30,21 @@ class menuSection {
         this.tabel.appendChild(tr);
         menuElement.appendChild(this.tabel);
     }
-    createNewFood(naam, vega, spicy, prijs) {
-        let gerecht = new food(naam, vega, spicy, prijs);
+    createNewFood(propertyArray) {
+        let gerecht = new food(propertyArray);
         this.tabel.appendChild(gerecht);
     }
 }
 
 class food {
-    constructor(naam, vega, spicy, prijs){
-        this.naam = naam;
-        this.vega = vega;
-        this.spicy = spicy;
-        this.prijs = prijs;
+    constructor(propertyArray){
         var master = document.createElement("tr");
-        var naamTd = document.createElement("td");
-        var vegaTd = document.createElement("td");
-        var spicyTd = document.createElement("td");
-        var prijsTd = document.createElement("td");
-        var naamText = document.createTextNode(naam);
-        var vegaText = document.createTextNode(vega);
-        var spicyText = document.createTextNode(spicy);
-        var prijsText = document.createTextNode(prijs);
-        naamTd.appendChild(naamText);
-        vegaTd.appendChild(vegaText);
-        spicyTd.appendChild(spicyText);
-        prijsTd.appendChild(prijsText);
-        master.appendChild(naamTd);
-        master.appendChild(vegaTd);
-        master.appendChild(spicyTd);
-        master.appendChild(prijsTd);
+        for (let i = 0; i < propertyArray.length; i++) {
+            var property = document.createElement("td");
+            var propertyText = document.createTextNode(propertyArray[i]);
+            property.appendChild(propertyText);
+            master.appendChild(property);
+        }
         return master;
     }
 }
@@ -107,4 +93,4 @@ class borrelHap extends food {
 
 let menus = new menu();
 let menusectie = menus.createNewMenuSection(["Gerecht", "Vega", "Spicy", "Prijs"]);
-menusectie.createNewFood("ei", "nee", "1/5", "12,95")
+menusectie.createNewFood(["ei", "nee", "1/5", "12,95"])

@@ -15,19 +15,25 @@ class menu {
     constructor(){
 
     }
-    createNewMenuSection(propertyArray) {
-        return new menuSection(propertyArray);
+    createNewMenuSection(title, propertyArray) {
+        return new menuSection(title, propertyArray);
     }
 }
 
 class menuSection {
-    constructor(propertyArray){
+    constructor(titel, propertyArray){
+        let title = document.createElement("h1");
+        let titleText = document.createTextNode(titel);
+        title.appendChild(titleText);
+        menuElement.appendChild(title);
         this.tabel = document.createElement("table");
         let tr = document.createElement("tr");
         for (let i = 0; i < propertyArray.length; i++) {
             let property = createTableHeader(propertyArray[i]);
             tr.appendChild(property);
         }
+        let aantal = createTableHeader("Aantal");
+        tr.appendChild(aantal);
         this.tabel.appendChild(tr);
         menuElement.appendChild(this.tabel);
     }
@@ -46,6 +52,20 @@ class food {
             property.appendChild(propertyText);
             master.appendChild(property);
         }
+        let aantal = document.createElement("div");
+        let plus = document.createElement("button");
+        let plusTekst = document.createTextNode("+");
+        let totaal = document.createElement("p");
+        let totaalTekst = document.createTextNode("0");
+        let min = document.createElement("button");
+        let minTekst = document.createTextNode("-");
+        plus.appendChild(plusTekst);
+        totaal.appendChild(totaalTekst);
+        min.appendChild(minTekst);
+        aantal.appendChild(min);
+        aantal.appendChild(totaal);
+        aantal.appendChild(plus);
+        master.appendChild(aantal);
         return master;
     }
 }
@@ -93,5 +113,5 @@ class borrelHap extends food {
 }
 
 let menus = new menu();
-let menusectie = menus.createNewMenuSection(["Gerecht", "Vega", "Spicy", "Prijs"]);
-menusectie.createNewFood(["ei", "nee", "1/5", "12,95"])
+let ontbijt = menus.createNewMenuSection("Ontbijt", ["Gerecht", "Vega", "Spicy", "Prijs"]);
+ontbijt.createNewFood(["ei", "nee", "1/5", "12,95"])

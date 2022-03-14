@@ -460,3 +460,25 @@ footer {
     width: 60%;
     background-color: rgba(15,15,15, 0.6);
 }
+
+#menubox table tr div {
+    display: flex;
+}
+
+#menubox table tr div button {
+   color: var(--main-text-color);
+   background: none;
+   border: none;
+   padding: 10px;
+}
+
+#menubox table tr div p {
+    color: var(--main-text-color);
+    background: none;
+    border: none;
+    padding: 10px;
+ }
+
+#menubox table tr div button:hover {
+    cursor: pointer;
+ }

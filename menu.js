@@ -97,10 +97,9 @@ class nagerecht extends food {
 }
 
 class drinken extends food {
-    constructor(naam, prijs, vega, percentage){
+    constructor(naam, percentage,prijs){
         super(naam);
         super(prijs);
-        super(vega);
         this.percentage = percentage;
     }
 }
@@ -123,18 +122,30 @@ voorgerechten.createNewFood(["garnalenspies","nee","3/5",13.95]);
 voorgerechten.createNewFood(["fetaSalade","ja","2/5",8.99]);
 voorgerechten.createNewFood(["Stokbrood","ja","0/5",6.95]);
 
-let hoofdgerechten = menus.createNewMenuSection(["Gerecht","Vega","Spicy","Prijs"]);
+let hoofdgerechten = menus.createNewMenuSection("Hoofdgerechten",["Gerecht","Vega","Spicy","Prijs"]);
 hoofdgerechten.createNewFood(["Hamburger","Nee","2/5",13.95]);
 hoofdgerechten.createNewFood(["Ceasar Salade","Nee","1/5",8.99]);
 hoofdgerechten.createNewFood(["Frietjes","Ja","1/5",4.95]);
-hoofdgerechten.createNewFood(["Spicy Kip Burger","4/5",11.95]);
+hoofdgerechten.createNewFood(["Spicy Kip Burger","Nee","4/5",11.95]);
 hoofdgerechten.createNewFood(["Schnitzel","Nee","2/5",7.95]);
 
-let nagerechten = menus.createNewMenuSection(["Gerecht","Vega","Prijs"]);
+let nagerechten = menus.createNewMenuSection("Nagerechten",["Gerecht","Vega","Prijs"]);
 nagerechten.createNewFood(["Dame Blanche","Ja",6.95]);
 nagerechten.createNewFood(["Banana Split","Ja",9.95]);
 nagerechten.createNewFood(["Sorbet","Ja",5.95]);
 nagerechten.createNewFood(["Brownie","Ja",11.95]);
 nagerechten.createNewFood(["Cheesecake","Ja",10.95]);
 
-let dranken = menus.createNewMenuSection()
+let dranken = menus.createNewMenuSection("Dranken",["Drink","Alcohol%","Prijs"]);
+dranken.createNewFood(["Coca Cola","0",1.99]);
+dranken.createNewFood(["Fanta","0",1.99]);
+dranken.createNewFood(["Heineken","4",3.99]);
+dranken.createNewFood(["Witte Wijn","12",5.99]);
+dranken.createNewFood(["Rode Wijn","13",5.99]);
+
+let borrelhapjes = menus.createNewMenuSection("Borrelhapjes",["Gerecht","Vega","Aantal Stuks","Prijs"])
+borrelhapjes.createNewFood(["Bitterballen","Nee",5,6.99]);
+borrelhapjes.createNewFood(["Kaas Snacks","Ja",8,4.99]);
+borrelhapjes.createNewFood(["Bami Hapjes","Ja",8,5.99]);
+borrelhapjes.createNewFood(["Rostis","Ja",6,3.99]);
+borrelhapjes.createNewFood(["Kip Nuggets","Nee",12,6.99]);

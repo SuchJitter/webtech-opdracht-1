@@ -14,24 +14,20 @@ function createTableHeader(description) {
 class menu {
     constructor(){
     }
-    createNewMenuSection() {
-        return new menuSection();
+    createNewMenuSection(propertyArray) {
+        return new menuSection(propertyArray);
     }
 }
 
 class menuSection {
-    constructor(){
+    constructor(propertyArray){
         this.tabel = document.createElement("table");
         let tr = document.createElement("tr");
-        let gerecht = createTableHeader("gerecht");
-        let vegetarisch = createTableHeader("Vega");
-        let spicy = createTableHeader("Spicy");
-        let prijs = createTableHeader("Prijs");
+        for (let i = 0; i < propertyArray.length; i++) {
+            let property = createTableHeader(propertyArray[i]);
+            tr.appendChild(property);
+        }
         this.tabel.appendChild(tr);
-        tr.appendChild(gerecht);
-        tr.appendChild(vegetarisch);
-        tr.appendChild(spicy);
-        tr.appendChild(prijs);
         menuElement.appendChild(this.tabel);
     }
     createNewFood(naam, vega, spicy, prijs) {
@@ -110,5 +106,5 @@ class borrelHap extends food {
 }
 
 let menus = new menu();
-let menusectie = menus.createNewMenuSection();
+let menusectie = menus.createNewMenuSection(["Gerecht", "Vega", "Spicy", "Prijs"]);
 menusectie.createNewFood("ei", "nee", "1/5", "12,95")

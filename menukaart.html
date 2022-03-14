@@ -85,8 +85,29 @@
             </div>
         </section>    
     </article>
-    <footer class="cafe__footer">
-        <p>© Atlantis Wereldrestaurant 2022</p>
+    <footer>
+        <select class = "menus" id="topmenu"></select>
+
+
+        <select class = "menus" onchange="backGround();" size="7" id = "colormenu">
+            <option>red</option>
+            <option>blue</option>
+            <option>yellow</option>
+            <option>orange</option>
+            <option>pink</option>
+            <option>cyan</option>
+            <option>white</option>
+          </select>
+
+        <select class = "menus" onchange="fontSize();" size="7" id = "fontmenu">
+            <option>xx-small</option>
+            <option>x-small</option>
+            <option>small</option>
+            <option>medium</option>
+            <option>large</option>
+            <option>x-large</option>
+            <option>xx-large</option>
+          </select>
     </footer>
     <script src="menu.js"></script>
 </body>

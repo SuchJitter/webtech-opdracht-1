@@ -63,12 +63,19 @@ class menuSection {
     addPrice (e) {
         if(e.target.tagName == "BUTTON" && e.target.innerText == "+") {
             var parent = e.target.parentNode.parentNode.parentNode;
+            console.log(parent);
+            parent.id = "inCart";
             var prijs = parent.childNodes[parent.childNodes.length - 2];
             this.subTotaal += parseFloat(prijs.innerText)
+
         }
         else if(e.target.tagName == "BUTTON" && e.target.innerText == "-") {
-            if (e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 2].innerText > 0){
+            let amount = e.target.parentNode.childNodes[e.target.parentNode.childNodes.length - 2].innerText;
+            if ( amount > 0){
                 var parent = e.target.parentNode.parentNode.parentNode;
+                if (amount == 1){
+                    parent.id = "";
+                }
                 var prijs = parent.childNodes[parent.childNodes.length - 2];
                 this.subTotaal -= parseFloat(prijs.innerText)
             }

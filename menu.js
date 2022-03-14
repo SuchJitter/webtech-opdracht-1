@@ -52,6 +52,7 @@ class food {
             property.appendChild(propertyText);
             master.appendChild(property);
         }
+        let tableElement = document.createElement("td");
         let aantal = document.createElement("div");
         let plus = document.createElement("button");
         let plusTekst = document.createTextNode("+");
@@ -65,7 +66,8 @@ class food {
         aantal.appendChild(min);
         aantal.appendChild(totaal);
         aantal.appendChild(plus);
-        master.appendChild(aantal);
+        tableElement.appendChild(aantal);
+        master.appendChild(tableElement);
         return master;
     }
 }

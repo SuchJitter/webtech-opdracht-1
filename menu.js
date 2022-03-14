@@ -19,7 +19,7 @@ class menu {
     }
     createNewMenuSection(title, propertyArray) {
         let ms = new menuSection(title, propertyArray);
-        this.menuSections.push(ms)
+        this.menuSections.push(ms);
         return ms;
     }
 

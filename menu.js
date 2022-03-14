@@ -8,6 +8,9 @@ class menu {
     constructor(){
         var menuSectionArray = [];
     }
+    createNewMenuSection() {
+        return new menuSection();
+    }
 }
 class food {
     constructor(voedsel){
@@ -21,12 +24,12 @@ class food {
 
 class menuSection {
     constructor(){
-        var FoodArray = [];
     }
     createNewFood(voedsel) {
         let gerecht = new food(voedsel);
     }
 }
 
-let menusectie = new menuSection();
-menusectie.createNewFood("dynamisch gegenereert");
+var menus = new menu();
+var ontbijt = menus.createNewMenuSection();
+ontbijt.createNewFood("eieren");

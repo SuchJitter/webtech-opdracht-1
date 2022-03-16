@@ -510,3 +510,25 @@ ul {
 select{
     overflow: hidden;
 }
+#menubox .cafe__takeaway__button{
+    margin-top: 30px;
+    transition: all 0.3s ease-in-out;
+    font-family: var(--main-font-family);
+    background: none;
+    border: 2px solid var(--main-text-color);
+    background: black;
+    font-size: 1.1em;
+    width: 7em;
+    height: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: var(--main-text-color);
+}
+
+#menubox .cafe__takeaway__button:hover{
+    background: var(--main-text-color);
+    color: black;
+    cursor: pointer;
+    transform: scale(1.05);
+}

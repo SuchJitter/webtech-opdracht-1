@@ -394,6 +394,12 @@ body {
     margin: 0;
 }
 
+.content h1 {
+    margin-top: 4vh ;
+    font-size: 2em;
+    color : #d3ab76;
+}
+
 .content h2 {
     margin-top: 4vh ;
     font-size: 2em;

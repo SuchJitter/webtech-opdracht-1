@@ -457,8 +457,7 @@ footer {
     border-radius: 15px;
     border-style: solid;
     border-color: gray;
-    width: 60%;
-    background-color: rgba(15,15,15, 0.6);
+    max-width: fit-content;
 }
 
 #menubox table tr div {
@@ -489,4 +488,8 @@ ul {
 
 #inCart{
     background-color: #303030;
+}
+
+select{
+    overflow: hidden;
 }

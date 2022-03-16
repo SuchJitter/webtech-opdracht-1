@@ -30,6 +30,18 @@ class menu {
         menuElement.appendChild(totaalH);
     }
 
+    createOrder(){
+        let orderButton = document.createElement("BUTTON");
+        let buttonText = document.createTextNode("Bestel");
+        orderButton.appendChild(buttonText);
+
+        orderButton.className = "cafe__takeaway__button"
+        menuElement.appendChild(orderButton);
+
+        orderButton.addEventListener("click", (e) => this.orderPressed(e), false);
+
+    }
+
     calcPrice (e) {
         if (e.target.tagName == "BUTTON") {
             this.totaal = 0;
@@ -37,8 +49,21 @@ class menu {
                 this.totaal += this.menuSections[i].subTotaal;
             }
             this.totaal = Math.round(this.totaal * 100) / 100;
-            menuElement.childNodes[menubox.childNodes.length - 1].childNodes[0].nodeValue = "Totaal: " + this.totaal.toString();
+            menuElement.childNodes[menubox.childNodes.length - 2].childNodes[0].nodeValue = "Totaal: " + this.totaal.toString();
         }
+    }
+
+    orderPressed (e){
+        if (e.target.tagName == "BUTTON"){
+            if (this.totaal != 0) {
+                alert("Your order has been made! \nYour Total is: \u20AC " + this.totaal);
+            }
+            else {
+                alert("Your cart is empty! Please add something before ordering!")
+            }
+            
+        }
+            
     }
 }
 
@@ -218,3 +243,4 @@ borrelhapjes.createNewFood(["Rostis","Ja",6,3.99]);
 borrelhapjes.createNewFood(["Kip Nuggets","Nee",12,6.99]);
 
 menus.createTotaal();
+menus.createOrder();

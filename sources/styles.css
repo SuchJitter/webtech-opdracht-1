@@ -382,6 +382,9 @@ body {
 .content { 
     color : white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: var(--main-font-family);
     font-size: var(--nav-font-size);
     font-weight: var(--nav-font-weight);
@@ -433,8 +436,7 @@ table, th, td {
 
 table {
     align-items: center;
-    width: 80%;
-    margin-left: 10% ;
+    max-width: 80%;
     margin-top: 5%;
 }
 
@@ -489,4 +491,20 @@ ul {
 
 #inCart{
     background-color: #303030;
+}
+
+#menubox h1 {
+    margin-top: 40px;
+}
+
+#menubox {
+    max-width: 80vw;
+}
+
+#menubox table {
+    max-width: 80vw;
+}
+
+.nomargin {
+    margin-top: 0;
 }

@@ -325,7 +325,7 @@ body {
     border-radius: 8px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 860px) {
     .cafe__grid__item__wrapper {
         display: flex;
         flex-direction: column;

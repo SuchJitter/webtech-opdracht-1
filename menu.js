@@ -35,7 +35,7 @@ class menu {
         let buttonText = document.createTextNode("Bestel");
         orderButton.appendChild(buttonText);
 
-        orderButton.className = "cafe__takeaway__button"
+        orderButton.className = "cafe__takeaway__button";
         menuElement.appendChild(orderButton);
 
         orderButton.addEventListener("click", (e) => this.orderPressed(e), false);
@@ -59,7 +59,7 @@ class menu {
                 alert("Your order has been made! \nYour Total is: \u20AC " + this.totaal);
             }
             else {
-                alert("Your cart is empty! Please add something before ordering!")
+                alert("Your cart is empty! Please add something before ordering!");
             }
             
         }
@@ -120,7 +120,7 @@ class menuSection {
             console.log(parent);
             parent.id = "inCart";
             var prijs = parent.childNodes[parent.childNodes.length - 2];
-            this.subTotaal += parseFloat(prijs.innerText)
+            this.subTotaal += parseFloat(prijs.innerText);
 
         }
         else if(e.target.tagName == "BUTTON" && e.target.innerText == "-") {
@@ -131,7 +131,7 @@ class menuSection {
                     parent.id = "";
                 }
                 var prijs = parent.childNodes[parent.childNodes.length - 2];
-                this.subTotaal -= parseFloat(prijs.innerText)
+                this.subTotaal -= parseFloat(prijs.innerText);
             }
         }
     }
@@ -178,7 +178,7 @@ class voorgerecht extends food {
     }
 }
 
-class hoofgerecht extends food {
+class hoofdgerecht extends food {
     constructor(propertyArray){
         super(propertyArray);
         this.spicy = propertyArray[2];

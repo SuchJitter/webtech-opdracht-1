@@ -1,8 +1,4 @@
 var menuElement = document.getElementById("menubox");
-// var paragraph = document.createElement("p");
-// var text = document.createTextNode();
-// paragraph.appendChild(text);
-// menuElement.appendChild(paragraph);
 
 function createTableHeader(description) {
     let th = document.createElement("th");
